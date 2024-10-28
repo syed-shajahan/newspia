@@ -1,18 +1,18 @@
 // components/ui/SearchBar.tsx
-"use client";
+'use client';
 
-import { useState, FormEvent } from "react";
-import { BiSearch } from "react-icons/bi";
-import { useRouter } from "next/navigation";
+import { useState, FormEvent } from 'react';
+import { BiSearch } from 'react-icons/bi';
+import { useRouter } from 'next/navigation';
 
 export const SearchBar = () => {
-  const [keywords, setKeywords] = useState<string>("");
+  const [keywords, setKeywords] = useState<string>('');
   const router = useRouter();
 
   const searchKeywords = (e: FormEvent) => {
     e.preventDefault();
     if (keywords) {
-      router.push(`/search?q=${keywords}`);
+      router.push(`/search?q=${encodeURIComponent(keywords)} `);
     }
   };
 

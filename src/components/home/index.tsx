@@ -1,8 +1,8 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import ArticleList from "./Article";
-import { getHomeApi } from "@/utils/api";
-import { NewsResponse } from "@/utils/type";
+'use client';
+import React, { useEffect, useState } from 'react';
+import ArticleList from './Article';
+import { getHomeApi } from '@/utils/api';
+import { NewsResponse } from '@/utils/type';
 
 const HomePage: React.FC = () => {
   const [datas, setDatas] = useState<NewsResponse | null>(null);
