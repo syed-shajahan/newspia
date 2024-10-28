@@ -1,21 +1,20 @@
 // components/ui/SearchBar.tsx
-'use client';
+"use client";
 
-import { useState, FormEvent } from 'react';
-import { BiSearch } from 'react-icons/bi';
-import { useRouter } from 'next/navigation';
+import { useState, FormEvent } from "react";
+import { BiSearch } from "react-icons/bi";
+import { useRouter } from "next/navigation";
 
 export const SearchBar = () => {
-  const [keywords, setKeywords] = useState<string>('');
+  const [keywords, setKeywords] = useState<string>("");
   const router = useRouter();
 
   const searchKeywords = (e: FormEvent) => {
     e.preventDefault();
     if (keywords) {
-      router.push(`/search?q=${encodeURIComponent(keywords)} `);
+      router.push(`/search?q=${encodeURIComponent(keywords)}`);
     }
   };
-
   return (
     <form onSubmit={searchKeywords} className="relative w-full max-w-md">
       <input
@@ -23,7 +22,7 @@ export const SearchBar = () => {
         value={keywords}
         onChange={(e) => setKeywords(e.target.value)}
         placeholder="Search articles..."
-        className="w-full px-4 py-2 text-sm border rounded-md outline-none bg-gray-50 focus:border-gray-500"
+        className="w-full px-4 py-2 text-sm border rounded-md outline-none bg-gray-50 dark:bg-[#000] focus:border-gray-500"
       />
       <button
         type="submit"
