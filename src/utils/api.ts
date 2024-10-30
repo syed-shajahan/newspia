@@ -19,7 +19,7 @@ export const getHomeApi = async (): Promise<NewsResponse | null> => {
 
 // search api below
 
-export const searchAPi = async (query: string) => {
+export const searchAPI = async (query: string) => {
   try {
     const res = await fetch(`https://newsapi.org/v2/everything?q=${query}&apiKey=6d143618ac6645d6af81a58cab22f3de`);
     const data = await res.json();

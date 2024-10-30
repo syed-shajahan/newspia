@@ -1,9 +1,11 @@
-import HomePage from "@/components/home";
+import HomePage from '@/components/home';
+import { getHomeApi } from '@/utils/api';
 
-export default function Home() {
+export default async function Home() {
+  const data = await getHomeApi();
   return (
     <>
-      <HomePage/>
+      <HomePage datas={data} />
     </>
   );
 }
