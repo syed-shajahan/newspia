@@ -7,7 +7,6 @@ import { Article } from '@/utils/type';
 const RandomNews = async () => {
   const data = await searchAPI('random news');
 
-
   return (
     <>
       <div className="block w-[33.3%] mt-[50px] ps-[10px] ml-[10px] border-l sticky top-20">
