@@ -20,7 +20,7 @@ const RandomNews = async () => {
                 <Link
                   href={article.url}
                   passHref
-                  className="font-bold text-[12px] text-blue-600 dark:text-[#03A9F4] hover:underline"
+                  className="font-bold text-[13px] leading-[20px] text-blue-600 dark:text-[#03A9F4] hover:underline"
                 >
                   {article.title}
                 </Link>
