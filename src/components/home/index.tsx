@@ -7,6 +7,8 @@ interface IhomeProps {
 }
 
 const HomePage: FC<IhomeProps> = ({ datas }) => {
+
+  console.log(datas , 'test')
   return (
     <>
       <div className="container mx-auto p-4">

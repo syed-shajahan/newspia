@@ -3,6 +3,8 @@ import { FC } from 'react';
 import Link from 'next/link';
 import { SearchBar } from './SearchInput';
 import { ModeToggle } from '../ModeToggle';
+import { HOME } from '@/utils/enum';
+
 
 const Header: FC = () => {
   return (
@@ -14,11 +16,12 @@ const Header: FC = () => {
           </div>
         </Link> */}
         <Link href={'/'}>
-          <h1 className="text-[45px] text-[#000] dark:text-[#fff] ">NewsPia</h1>
+          <h1 className="text-[45px] text-[#000] dark:text-[#fff] ">{HOME.NEWSPIA}</h1>
         </Link>
 
         <div className="flex items-center">
           <SearchBar />
+
 
           <div className="ms-2">
             <ModeToggle />

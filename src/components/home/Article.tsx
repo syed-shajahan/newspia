@@ -15,11 +15,11 @@ const ArticleList: FC<ArticleListProps> = ({ datas }) => {
   const loadMoreArticles = () => {
     setVisibleCount((prev) => prev + 30);
   };
-  console.log(datas?.articles.slice(0, visibleCount));
+
   return (
     <>
       <div className="columns-1 lg:columns-2">
-        {datas?.articles.slice(0, visibleCount).map((article, index) => (
+        {datas?.articles?.slice(0, visibleCount)?.map((article, index) => (
           <div
             key={index}
             className="bg-white dark:bg-[#101010] border mb-5 break  rounded-lg overflow-hidden transition-transform transform "
@@ -42,7 +42,7 @@ const ArticleList: FC<ArticleListProps> = ({ datas }) => {
         ))}
       </div>
 
-      {visibleCount < (datas?.articles.length || 0) && (
+      {visibleCount < (datas?.articles?.length || 0) && (
         <Button
           className="my-4 mx-auto block p-4 h-auto w-[200px]  rounded-[25px] bg-transparent dark:border-[#ffffffcb] border-[#101010] border-[1px] dark:text-white text-[#101010]  transition duration-200 dark:hover:bg-[#03A9F4] hover:bg-blue-600"
           onClick={loadMoreArticles}

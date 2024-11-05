@@ -9,7 +9,7 @@ const RandomNews = async () => {
 
   return (
     <>
-      <div className="block w-[33.3%] mt-[50px] ps-[10px] ml-[10px] border-l sticky top-20">
+      <div className="hidden lg:block w-[33.3%] mt-[50px] ps-[10px] ml-[10px] border-l sticky top-20">
         {data?.articles?.slice(0, 10).map((article: Article, index: number) => {
           return (
             <div
