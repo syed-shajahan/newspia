@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import React from 'react';
-import { searchAPI } from '@/utils/api';
-import { FaArrowRightLong } from 'react-icons/fa6';
-import { Article } from '@/utils/type';
+import Link from "next/link";
+import React from "react";
+import { searchAPI } from "@/utils/api";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Article } from "@/utils/type";
 
 const RandomNews = async () => {
-  const data = await searchAPI('random news');
+  const data = await searchAPI("random news");
 
   return (
     <>
@@ -26,13 +26,18 @@ const RandomNews = async () => {
                 </Link>
 
                 <p className="text-sm  text-gray-700 dark:text-[#fff] mt-2 text-[14px]">
-                  {article.description} <FaArrowRightLong className="inline-block" />
+                  {article.description}{" "}
+                  <FaArrowRightLong className="inline-block" />
                 </p>
 
                 <span>{article.publishedAt}</span>
               </div>
               <div className="relative w-fulloverflow-hidden w-[200px] h-[200px]">
-                <img src={article.urlToImage} alt={article?.title} className="flex-shrink-0" />
+                <img
+                  src={article.urlToImage}
+                  alt={article?.title}
+                  className="flex-shrink-0"
+                />
               </div>
             </div>
           );
