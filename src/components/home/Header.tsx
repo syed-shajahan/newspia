@@ -5,7 +5,6 @@ import { SearchBar } from './SearchInput';
 import { ModeToggle } from '../ModeToggle';
 import { HOME } from '@/utils/enum';
 
-
 const Header: FC = () => {
   return (
     <nav className=" border-[#EEE] dark:border-[#1b1b1b]  bg-[#ffffff99] dark:!bg-[#0000004b]  z-10 sticky top-0  p-4 border-b backdrop-blur-[3px]">
@@ -21,7 +20,6 @@ const Header: FC = () => {
 
         <div className="flex items-center">
           <SearchBar />
-
 
           <div className="ms-2">
             <ModeToggle />
